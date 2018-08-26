@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word Guess Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+    
+</head>
+<body>
+    <!-- MAIN DIV -->
+    <div class="maindiv"> 
+    <h1>THE WORD GUESSING GAME</h1>
+    <h2>Thank you for choosing this Game. Please read the instructions.</h2>
+    <!-- left div inside main div-->
+    <div class="leftdiv">
+        <!-- image inside left div -->
+        <img src="assets/images/mixedMAin.jpg">
+
+        </img>
+        <!-- paragrahph inside left div-->
+        <p>
+            Instructions here. Instructions here. Instructions here. Instructions here. Instructions here. Instructions here. Instructions here. Instructions here. Instructions here. 
+            Instructions here. Instructions here. Instructions here. Instructions here. 
+        </p>
+    </div>
+    <!-- left div ends-->
+    <!-- right div starts -->
+    <div class="rightdiv">
+        <P class="topp">Press any key to get strated</P>
+        <p class="rightp">Guess a Letter and type: </p>
+        <!-- user input box and button inside the right div-->
+        <input type="text" class="guess" placeholder="Please type a letter here">
+        <button>
+            Click 
+        </button>
+        <!-- paragraphs inside the right div-->
+        <p class="rightp"> </p>                     <!-- this p tag to collect user input in it-->
+        <div class="wrongLtrs"></div>               <!-- this p tag to get the wrong words list-->
+        <p class="rightp">Your wins: </p>           <!-- this p tag to show user wins-->
+        <p class="rightp">Your losses: </p>         <!-- this p tag to show user losses-->
+        <P class="rightp">Guesses remaining: </P>   <!-- this p tag to show the remaining guesses-->
+        <p class="rightp">Letters Already Guessed:</p>  <!-- this p tag to show user the words already used. -->
+       
+       
+    </div>
+    <!-- right div ends-->
+    <!-- a div to clear clearfix. -->
+    <div id="clear"></div>
+
+</div>
+
+<script src="assets/javaScript/game.js"></script>
+</body>
+</html>
