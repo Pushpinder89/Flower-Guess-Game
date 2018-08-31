@@ -1,48 +1,57 @@
 //declaring the variables
 
+var guesses = 10;
+var wins = 0;
+var losses = 0;
+var guessesLeft = 0;
+var guessedltr = [];
+var wordArray = [];
 var words = ["amaryllis", "anemone", "jasmine", "lavender", "lily", "tulip"];
-//var startGuesses = 10;
-//var wrongGuesses = [];
-//var rightGuesses = [];
-//var leftGuesses = 0;
-var userInput = [];
-var userGuess = document.getElementsByClassName("guess");
-var remainingLetters;
-var msg = document.getElementsByClassName("rightp");
-
-//getting a random number --> choose var and then display array[], inside the array write math.floor and then type (inside here type math.
-//random() to get the random number then multiply that * with the lenghth of the array. )
-var letter = words[Math.floor(Math.random()* words.length)];
-
-// setting the lengtth of the random word equal to "_" .
-
-for (var i = 0; i < letter.length; i++) {
-    userInput[i] = "_";
-    
-}
-
-// checking the remaining letters. 
-remainingLetters = letter.length;
-
-while (remainingLetters > 0) {
-    /*msg = userInput. join(" ");  */             alert(answerArray.join(" "));
-
-    if (userGuess === null) {
-        break;
-        } else if (userGuess.length !== 1) {
-        msg = ("Please enter a single letter.");
-       } else {
-        // Update the game state with the guess
-
-        for (var j = 0; j < letter.length; j++) {
-            if (letter[j] === userGuess) {
-            userInput[j] = guess;
-            remainingLetters--;
-            }
+var word = words[Math.floor(Math.random() * words.length)];
 
 
-        }
-    
+
+
+    for (var i = 0; i < word.length; i++) {
+         wordArray[i] = "_";
     }
 
+    wgsd.innerHTML = wordArray.join(" ");
+
+    console.log(wordArray);
+    console.log(word);
+    
+
+    document.onkeypress = function (event) {
+            var userGuess = event.key;
+                    /////
+                guessedltr.push(userGuess);
+                    ////
+                    if (word.indexOf(userGuess) > -1){
+                        
+                            console.log("correct guess");
+                            guessedltr.append(wgsd);
+                        wins++;
+                    } else {
+                        
+                        guesses--;
+                    }
+
+                    /*if (guesses === 0) {
+                        losses++;
+                        //guesses = 10;
+
+                        //guessedltr = "Out of guesses";
+
+                    }*/
+                  
+
+    document.getElementById("guessedltr").innerHTML = "Guessed Letters: " + guessedltr;
+    console.log(userGuess);
+    document.getElementById('wins').innerHTML = "Wins: " + wins;
+    document.getElementById('losses').innerHTML = "losses: " + losses;
+    document.getElementById('guessed').innerHTML = "Guesses left: " + guesses;
+
 }
+
+
