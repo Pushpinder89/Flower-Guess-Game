@@ -30,13 +30,14 @@ var word = words[Math.floor(Math.random() * words.length)];
                     if (word.indexOf(userGuess) > -1){
                         
                             console.log("correct guess");
-                            guessedltr.append(wgsd);
+                            
                         wins++;
+                        
                     } else {
                         
                         guesses--;
                     }
-
+                   
                     /*if (guesses === 0) {
                         losses++;
                         //guesses = 10;
