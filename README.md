@@ -1,16 +1,10 @@
 # Word-Guess-Game
- Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. 
+        
+           #### This app randomly picks a flower name and you have to guess which flower the app chose.
+        
+           #### 1. You will be shown the blank spots for letters and you have to guess hidden letters one at a time the flower name includes.
+        
+            #### 2. When you win, Wins will increase.
 
-                1. User will be shown the blank spots for letters and they have to guess what letter the app is thinking of
-                
-                2.  Wins: (# of times the user has guessed the letter correctly)
-                
-                3. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
-                
-                4. Guesses Left: (# of guesses left. This will update)
-                
-                5. Your Guesses So Far: (the specific letters that the user typed.)
-                
-                6. When the player wins,  Wins will increase.
-                
-                7. When the player loses, Losses will increase.
+           #### 3. When you lose, Losses will increase.
+        </p>

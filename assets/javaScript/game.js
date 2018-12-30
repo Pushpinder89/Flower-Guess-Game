@@ -6,20 +6,22 @@ var losses = 0;
 var guessesLeft = 10;
 var guessedltr = [];
 var wordArray = [];
-var words = ["amaryllis", "anemone", "jasmine", "lavender", "lily", "tulip"];
+var words = ["AMARYLLIS", "ANEMONE", "JASMINE", "LAVENDER", "LILY", "TULIP"];
 var word = words[Math.floor(Math.random() * words.length)];
 var letterArray = word.split("");
 
-
+// go through the word and replace the letters with "_"
 for (var i = 0; i < word.length; i++) {
     wordArray[i] = "_";
 }
 
+//join the wordArray
 wgsd.innerHTML = wordArray.join(" ");
-
+// check the work
 console.log(wordArray);
 console.log(word);
 
+// create a function to check the win 
 function checkWin() {
     if (letterArray.toString() === wordArray.toString()) {
         restartGame();
@@ -28,14 +30,17 @@ function checkWin() {
     } 
 }
 
+// create a function to check the losses
 function checkLosses(){
-if (guesses === 0) {
+if (guesses === 0) { 
     losses++;
+    // correctLetter.append("The flower name was" + " " + word);
     restartGame();
     console.log("you lost");
 }
 }
 
+// create a function to restart the game
 function restartGame() {
     guesses = 10;
     word = words[Math.floor(Math.random() * words.length)];
@@ -45,29 +50,29 @@ function restartGame() {
     for (var i = 0; i < word.length; i++) {
         wordArray[i] = "_";
     }
+    wgsd.innerHTML = wordArray.join(" ");
+   
 }
 
 document.onkeypress = function (event) {
+    guesses--;
     var userGuess = event.key;
+    var uguess = userGuess.toLocaleUpperCase();
     /////
-    guessedltr.push(userGuess);
-    ////
-    if (word.indexOf(userGuess) > -1) {
+    guessedltr.push(uguess);
+    //// check how this function works
+    if (word.indexOf(uguess) > -1) {
         for (var i = 0; i < letterArray.length; i++) {
-            if (letterArray[i] === userGuess) {
-                wordArray[i] = userGuess;
+            if (letterArray[i] === uguess) {
+                wordArray[i] = uguess;
             }
         }
+       
         console.log("correct guess");
         console.log(wordArray);
         console.log(letterArray);
-        document.getElementById("wgsd").innerHTML = wordArray;
-       
+        document.getElementById("wgsd").innerHTML = wordArray;  
 
-    } else {
-        
-        guesses--;
-        
     }
     checkLosses();
     checkWin();
