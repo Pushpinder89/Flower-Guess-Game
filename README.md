@@ -7,4 +7,4 @@
             #### 2. When you win, Wins will increase.
 
            #### 3. When you lose, Losses will increase.
-        </p>
+        
