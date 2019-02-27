@@ -1,4 +1,4 @@
-# Word-Guess-Game
+# Flower-Guess-Game
 
 #### This app randomly picks a flower name and you have to guess which flower the app chose.
         
